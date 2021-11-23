@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<div>
+  <h2 >Query</h2>
+  Question: {{qtext}}
+  <div>
+    <table>
+        <thead>
+        <tr>
+            {% for i in headers %}
+            <th> {{ i }}</th>
+            {% endfor %}
+        </tr>
+        </thead>
+        <tbody>
+            {% for row in results %} 
+                <tr>
+                    {% for i in row %}
+                    <td>{{ i }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}        
+        </tbody>
+    </table>
+    
+</div>
+
+  <form method="POST" action="">
+      <div>{{ form.querybody.label }}
+        <br>
+        {{form.querybody(size=32)}}
+      </div>
+      {{ form.submit }}
+  </form>
+</div>
+{% endblock %}

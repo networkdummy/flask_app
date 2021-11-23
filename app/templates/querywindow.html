@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div>
+  <h2 >Query</h2>
+  <form method="POST" action="">
+      <div>{{ form.querybody.label }}
+        <br>
+        {{form.querybody(size=32)}}
+      </div>
+      {{ form.submit }}
+  </form>
+</div>
+{% endblock %}
