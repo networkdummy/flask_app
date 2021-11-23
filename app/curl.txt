@@ -1,0 +1,4 @@
+curl -X POST -F 'querybody=select * from shipment' localhost:5000/queryw
+curl --data-urlencode "name=John Doe (Junior)" localhost:5000/queryw
+curl -d '{"sqlin":"select * from shipment where SNo=2"}' -H 'Content-Type: application/json' localhost:5000/queryw
+curl -X POST -F 'querybody="select * from shipment"' localhost:5000/queryw
